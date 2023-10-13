@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlexLayoutIssue.MainPage">
+
+    <Grid x:Name="mainStackLayout" RowDefinitions="Auto, *"
+             HorizontalOptions="Fill" VerticalOptions="Fill">
+        <VerticalStackLayout Grid.Row="0" BackgroundColor="White">
+            <Label x:Name="headlineOneLabel" Grid.Row="0" Margin="25, 15, 25, 0"  
+                       FontSize="Medium" Text="Header 1"
+                       HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            <Label x:Name="headlineTwoLabel" Grid.Row="1" Margin="25, 0, 25, 15"  
+                   Text="Header 2" FontSize="Medium"
+                   HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" />
+            
+        </VerticalStackLayout>
+
+        <ScrollView Grid.Row="1" 
+                HorizontalOptions="Center" VerticalOptions="FillAndExpand" 
+                VerticalScrollBarVisibility="Never">
+            <FlexLayout x:Name="wrapLayout" HorizontalOptions="Center" VerticalOptions="Fill" 
+                    Direction="Row" Wrap="Wrap" JustifyContent="Start" />
+
+
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
